@@ -1,0 +1,159 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} // end all elements
+
+
+/* --------------------------- BODY --------------------------- */
+body {
+    font-family: $defaultFont;
+    font-weight: $lightWeight;
+    min-width: 320px;
+}
+
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {border-bottom: 1px solid $greyColor;}
+header {
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: $gutter;
+    align-items: center; //vertically
+    padding: .5rem $gutter;
+    span {
+        font-size: 1.6rem;
+        font-weight: $lightWeight;
+        color: $primaryColor;
+    }
+} // end header
+
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+
+#navWrapper {
+    background-color: $primaryColor;
+}
+nav {
+    ul {
+        padding: 0;
+        margin: 0 $gutter;
+    }
+    ul li {
+        list-style-type: none;
+    }
+    ul li a {
+        color: $greyColor;
+        text-decoration: none;
+        display: block;
+        padding: .8rem $gutter;
+    }
+    ul li.active a {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: $primaryColor;
+        border-radius: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------------- MAIN --------------------------- */
+main {
+    h1 {
+        padding: 1rem $gutter.5rem $gutter;
+        font-size: 1.5rem;
+        color: $secondaryColor;
+        font-weight: $lightWeight
+    }
+    p {
+        padding: .5rem $gutter;
+        color: #333;
+        line-height: $leading;
+    }
+}
+main{padding: 1rem 2vw;}
+main > div {border: 3px solid #5a2b3b}
+
+main > div > div {
+    border: 1px solid #1d6f7c ;
+    text-align: center;
+    h3 {font-size: 1.2rem;
+    }
+    img {display: block; width: 100%; height: auto;}
+}
+.parent1 {
+    margin: 0 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    img {
+        width:100%;
+        height: auto;
+    }
+}
+
+.parent2 {
+    margin: 0 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px 20px;
+    div {
+        flex-grow:1;
+        flex-shrink: 1;
+        flex-basis: 200px;
+    }
+
+}
+.parent3 {
+    margin: 0 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 8px;
+    column-gap: 8px;
+    div {
+        flex-grow:1;
+        flex-shrink: 1;
+        flex-basis: 200px;
+    
+    }
+}
+.parent4 {
+    display: grid;
+    //grid-template-columns: 1fr 1fr;
+    //grid-template-columns: repeat(3,1fr);
+    //grid-template-columns: repeat(3, minmax(100px, 200px));
+    //grid-template-columns: repeat(auto-fit, minmax(100px,200px));
+    grid-template-columns: repeat(auto-fit, minmax(400px,3fr));
+    gap: 16px 8px;
+}
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+    background-color: $primaryColor
+} // end footer wrapper
+
+footer {
+    font-size: .85rem;
+    padding: 1rem $gutter;
+    color: $greyColor;
+    text-align: center;
+    line-height: $leading;
+    a {color: $greyColor;}
+}// end footer

@@ -1,0 +1,20 @@
+/* NAVIGATION STUFF GOES HERE  */
+header, nav, main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav {
+    ul {
+        display: flex;
+        justify-content: flex-start;
+        column-gap: $gutter;
+    }
+    ul li a {
+        margin: 10px 0;
+    }
+    ul li a:hover {
+        text-decoration: underline 2px $accentColor;
+
+    }
+}
